@@ -1,0 +1,34 @@
+<p>checkbox and Float Label</p>
+
+<h5>Basic</h5>
+<div class="p-field-checkbox">
+    <p-checkbox [(ngModel)]="checked"  inputId="binary"></p-checkbox>
+    <label for="binary">{{checked}}</label>
+</div>
+<h5>Multiple</h5>
+<div class="p-field-checkbox">
+    <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+    <label for="ny">New York</label>
+</div>
+<div class="p-field-checkbox">
+    <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox>
+    <label for="sf">San Francisco</label>
+</div>
+<div class="p-field-checkbox">
+    <p-checkbox name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
+    <label for="la">Los Angeles</label>
+</div>
+<div class="p-field-checkbox">
+    <p-checkbox name="group1" value="Chicago" [(ngModel)]="selectedCities" inputId="ch"></p-checkbox>
+    <label for="ch">Chicago</label>
+</div>
+<div>
+    selectedCities : {{selectedCities}}
+</div>
+<div style="margin-top:50px"> 
+    <span class="p-float-label">
+        <input type="text" id="inputtext" pInputText [(ngModel)]="value1"> 
+        <label for="inputtext">InputText</label>
+    </span>
+    <div>Hello {{value1}}</div>
+</div>

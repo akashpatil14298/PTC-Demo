@@ -1,0 +1,25 @@
+ <p-table #dt1
+    responsiveLayout="scroll"
+    [value]="data"
+    styleClass="p-datatable-gridlines"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>USER</th>
+        <th>SUMMARY</th>
+        <th>ID</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+      <tr class="rowBorder">
+        <td>{{ data.user }}</td>
+        <td>{{ data.summary }}</td>
+        <td>{{ data.id }}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <tr>
+        <td colspan="3">Total</td>
+      </tr>
+    </ng-template>
+  </p-table>

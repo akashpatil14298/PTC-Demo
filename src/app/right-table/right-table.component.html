@@ -1,0 +1,44 @@
+<p-table #dt
+    responsiveLayout="scroll"
+    [value]="data"
+    styleClass="p-datatable-gridlines"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THUR</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+        <th>TOTAL</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+      <tr class="rowBorder">
+        <!-- <td *ngIf="data.day[0]!='-'">{{ data.day[0] }}</td>
+        <td>{{ data.day[1] }}</td>
+        <td>{{ data.day[2] }}</td>
+        <td>{{ data.day[3] }}</td>
+        <td>{{ data.day[4] }}</td>
+        <td>{{ data.day[5] }}</td>
+        <td>{{ data.day[6] }}</td>
+        <td>-</td> -->
+        <td *ngFor="let item of data.day">{{item}}</td>
+        <td>-</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <tr>
+        <td>24h</td>
+        <td>14h</td>
+        <td>24h</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </ng-template>
+  </p-table>

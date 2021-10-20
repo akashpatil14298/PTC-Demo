@@ -1,0 +1,23 @@
+<p>rating and Slider works!</p>
+<h5>Basic</h5> 
+<p-rating [(ngModel)]="val1"></p-rating>
+
+<h5>No Cancel</h5> 
+<p-rating [(ngModel)]="val2" [cancel]="false"></p-rating>
+
+
+<h5>Basic: {{val3}}</h5>
+<p-slider [(ngModel)]="val3"></p-slider>
+
+<h5>Input: {{val4}}</h5>
+<input type="text" pInputText [(ngModel)]="val2" readonly/>
+<p-slider [(ngModel)]="val2"></p-slider>
+
+<h5>Step: {{val5}}</h5>
+<p-slider [(ngModel)]="val5" [step]="20"></p-slider>
+
+<h5>Range: {{rangeValues[0] + ' - ' + rangeValues[1]}}</h5>
+<p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+
+<h5>Vertical: {{val6}}</h5>
+<p-slider [(ngModel)]="val6" orientation="vertical"></p-slider>

@@ -1,0 +1,37 @@
+<p>knob works!</p>
+<div class="p-field p-col-12 p-md-4">
+    <h5>Basic</h5>
+    <p-knob [(ngModel)]="value"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5>Readonly</h5>
+    <p-knob [(ngModel)]="value" [readonly]="true"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5>Disabled</h5>
+    <p-knob [(ngModel)]="value" [disabled]="true"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Min/Max</h5>
+    <p-knob [(ngModel)]="value" [min]="-50" [max]="50"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Step</h5>
+    <p-knob [(ngModel)]="value" [step]="10"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Template</h5>
+    <p-knob [(ngModel)]="value" valueTemplate="{value}%"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Stroke</h5>
+    <p-knob [(ngModel)]="value" [strokeWidth]="5"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Size</h5>
+    <p-knob [(ngModel)]="value" [size]="200"></p-knob>
+</div>
+<div class="p-field p-col-12 p-md-4">
+    <h5 class="p-mt-3">Color</h5>
+    <p-knob [(ngModel)]="value" valueColor="gray" rangeColor="green"></p-knob>
+</div>

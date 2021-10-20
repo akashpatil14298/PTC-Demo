@@ -1,0 +1,130 @@
+.Content-box {
+  background-color: rgba(116, 116, 116, 0.2);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.Content-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  border-radius: 5px;
+}
+
+.angleupIcon {
+  padding-right: 5px;
+}
+
+.SelectedTab {
+  font-size: 14px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.seperator1 {
+  width: 100%;
+  background-color: rgb(194, 191, 191);
+  height: 1px;
+  margin-top: 15px;
+}
+
+.tableHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.tableheader {
+  padding-right: 5px;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.TableIcon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(228, 225, 225);
+}
+
+.notes {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.Note-box {
+  height: 200px;
+  width: 100%;
+}
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: #ff0000 !important;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  text-align: center;
+  /* border-left: 1px solid #e9ecef; */
+  border-width: 0 0 0 0;
+  padding: 1rem 1rem;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  text-align: center;
+  padding: 1rem 1rem;
+  /* border: 1px solid #e9ecef; */
+  border-width: 0 0 0 0;
+  font-weight: 600;
+  color: #495057;
+  background: #f8f9fa;
+  transition: box-shadow 0.2s;
+}
+
+:host ::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-tfoot {
+  border-width: 1px;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tfoot > tr > td {
+  text-align: center;
+  padding: 1rem 1rem;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+  font-weight: normal;
+  color: #495057;
+  background: #fff;
+}
+
+.rowBorder {
+  border-bottom: 1px solid #fff;
+}
+@media screen and (min-width:768px) and (max-width:991.8px){
+  
+}
+
+
+/*---------------------------- Desktops ------------------------------ */
+@media  screen and (min-width:992px) and (max-width:1199.8px){
+  :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    padding: 1rem 0rem;
+  }
+
+  :host ::ng-deep .p-datatable .p-datatable-thead > tr > td {
+    padding: 1rem 0rem;
+  }
+}
+
+/*----------------------------Large Desktops ------------------------------ */
+
+@media  screen and (min-width:1200px) {
+ 
+}

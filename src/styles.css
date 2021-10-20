@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* p
+{
+    color:ba;
+} */
+
+body{
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+@media  screen and (max-width:1200px) {
+  
+  /*-------------------Calender---------------------*/
+
+  
+
+
+}
+
+

@@ -1,0 +1,100 @@
+<div [ngClass]="checked == true ? 'Content-box1' : 'Content-box'">
+  <div class="Content-heading">
+    <p-toggleButton
+      [(ngModel)]="checked"
+      onIcon="pi pi-angle-up"
+      offIcon="pi pi-angle-down"
+      class="angleupIcon"
+    ></p-toggleButton>
+    <div class="SelectedTab">{{ Name }}</div>
+  </div>
+  <p-divider styleClass="divider"></p-divider>
+  <div *ngIf="checked">
+    <div class="tableHeaderContainer">
+      <div class="tableHeaderContainer">
+        <p class="p-text-italic tableheader">{{ Name }}</p>
+        <span class="pi pi-cog TableIcon"></span>
+      </div>
+      <div class="DateSection">
+        <div class="Weekof">Week of</div>
+        <p-calendar
+          [(ngModel)]="rangeDates"
+          selectionMode="range"
+          [readonlyInput]="true"
+          class="date"
+        ></p-calendar>
+        <div class="verticalLine">|</div>
+        <span class="pi pi-pencil pencilIcon"></span>
+      </div>
+    </div>
+    <!-- <div class="table">
+      <div style="width: 100%; display: flex; flex-direction: row">
+        <div style="width: 100%; border-right: 2px">
+          <p-table
+            responsiveLayout="scroll"
+            [value]="data"
+            styleClass="p-datatable-gridlines"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th>USER</th>
+                <th>SUMMARY</th>
+                <th>ID</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THUR</th>
+                <th>FRI</th>
+                <th>SAT</th>
+                <th>SUN</th>
+                <th>TOTAL</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-data>
+              <tr>
+                <td>{{ data.user }}</td>
+                <td>{{ data.summary }}</td>
+                <td>{{ data.id }}</td>
+                <td>{{ data.day[0] }}</td>
+                <td>{{ data.day[1] }}</td>
+                <td>{{ data.day[2] }}</td>
+                <td>{{ data.day[3] }}</td>
+                <td>{{ data.day[4] }}</td>
+                <td>{{ data.day[5] }}</td>
+                <td>{{ data.day[6] }}</td>
+                <td>-</td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="footer">
+              <tr>
+                <td colspan="3">Total</td>
+                <td>24h</td>
+                <td>14h</td>
+                <td>24h</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div> -->
+    <div class="table">
+      <div class="leftTable">
+        <app-left-table></app-left-table>
+      </div>
+      <div class="rightTable">
+        <app-right-table></app-right-table>
+      </div>
+    </div>
+    <div class="notes">Notes</div>
+    <textarea
+      pInputTextarea
+      class="Note-box"
+      placeholder="Enter Note"
+    ></textarea>
+  </div>
+</div>

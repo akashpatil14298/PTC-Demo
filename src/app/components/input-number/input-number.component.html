@@ -1,0 +1,67 @@
+<p>input-number works!</p>
+<p-inputNumber [(ngModel)]="val"></p-inputNumber>
+
+<h5>Numerals</h5>
+<div class="p-field p-md-3">
+    <label for="integeronly">Integer Only :</label>
+    <p-inputNumber inputId="integeronly" [(ngModel)]="value1">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="withoutgrouping">Without Grouping</label>
+    <p-inputNumber [(ngModel)]="value2" mode="decimal" inputId="withoutgrouping" [useGrouping]="false">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="minmaxfraction">Min-Max Fraction Digits</label>
+    <p-inputNumber [(ngModel)]="value3" inputId="minmaxfraction" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="5">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="locale-indian">Indian Locale</label>
+    <p-inputNumber [(ngModel)]="value4" inputId="locale-indian" mode="decimal" locale="en-IN" [minFractionDigits]="2">
+    </p-inputNumber>
+</div>
+
+<h5>Currency</h5>
+<div class="p-field p-col-12 p-md-3">
+    <label for="currency-us">United States</label>
+    <p-inputNumber [(ngModel)]="value4" inputId="currency-us" mode="currency" currency="USD" locale="en-US">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="currency-germany">Germany</label>
+    <p-inputNumber [(ngModel)]="value4" mode="currency" inputId="currency-germany" currency="EUR" locale="de-DE">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="currency-india">India</label>
+    <p-inputNumber [(ngModel)]="value4" mode="currency" inputId="currency-india" currency="INR" currencyDisplay="code" locale="en-IN">
+    </p-inputNumber>
+</div>
+
+<h5>Prefix and Suffix</h5>
+<div class="p-field p-col-12 p-md-3">
+    <label for="mile">Mile</label>
+    <p-inputNumber [(ngModel)]="value3" inputId="mile" suffix=" mi">
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="percent">Percent</label>
+    <p-inputNumber [(ngModel)]="value4" inputId="percent" suffix="%">
+    </p-inputNumber>
+</div>
+
+<h5>Buttons</h5>
+
+<div class="p-field p-col-12 p-md-3">
+    <label for="stacked">Stacked</label>
+    <p-inputNumber [(ngModel)]="value4" [showButtons]="true" inputId="stacked" mode="currency" currency="USD" >
+    </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+    <label for="horizontal">Horizontal with Step</label>
+    <p-inputNumber [(ngModel)]="value1" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="0.50"
+    decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" mode="currency" currency="EUR">
+    </p-inputNumber>
+</div>

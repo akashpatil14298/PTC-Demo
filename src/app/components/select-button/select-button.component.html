@@ -1,0 +1,12 @@
+<p>select-button and toggle button works!</p>
+<h5>Single Selection</h5>
+<p-selectButton [options]="stateOptions" [(ngModel)]="value1" optionLabel="label" optionValue="value"></p-selectButton>
+
+<h5>Multiple Selection</h5>
+<p-selectButton [options]="paymentOptions" [(ngModel)]="value2"  optionLabel="name" optionValue="value"></p-selectButton>
+
+<h5>Basic</h5>
+<p-toggleButton [(ngModel)]="checked" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+
+<h5>Customized</h5>
+<p-toggleButton [(ngModel)]="checked" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check" offIcon="pi pi-times" [style]="{'width': '10em'}"></p-toggleButton>

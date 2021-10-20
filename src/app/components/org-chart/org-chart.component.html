@@ -1,0 +1,81 @@
+<!-- <p>org-chart works!</p>
+<h5>Advanced</h5>
+<p>Organization with advanced customization.</p>
+<p-organizationChart [value]="data1" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)"
+    styleClass="company">
+    <ng-template let-node pTemplate="person">
+        <div class="node-header p-corner-top">{{node.label}}</div>
+        <div class="node-content">
+            <div>{{node.data.name}}</div>
+        </div>
+    </ng-template>
+    <ng-template let-node pTemplate="department">
+        {{node.label}}
+    </ng-template>
+</p-organizationChart> -->
+<p>TimeLine</p>
+<div class="card">
+    <h5>Horizontal</h5>
+    <h6>Top Align</h6>
+    <p-timeline [value]="events2" layout="horizontal" align="top">
+        <ng-template pTemplate="content" let-event>
+            {{event}}
+        </ng-template>
+    </p-timeline>
+
+    <h6>Bottom Align</h6>
+    <p-timeline [value]="events2" layout="horizontal" align="bottom">
+        <ng-template pTemplate="content" let-event>
+            {{event}}
+        </ng-template>
+    </p-timeline>
+
+    <h6>Alternate Align</h6>
+    <p-timeline [value]="events2" layout="horizontal" align="alternate">
+        <ng-template pTemplate="content" let-event>
+            {{event}}
+        </ng-template>
+        <ng-template pTemplate="opposite" let-event>
+             
+        </ng-template>
+    </p-timeline>
+</div>
+<p>Vertical </p>
+<div class="card">
+    <h5>Left Align</h5>
+    <p-timeline [value]="events1">
+        <ng-template pTemplate="content" let-event>
+            {{event.status}}
+        </ng-template>
+    </p-timeline>
+</div>
+
+<div class="card">
+    <h5>Right Align</h5>
+    <p-timeline [value]="events1" align="right">
+        <ng-template pTemplate="content" let-event>
+            {{event.status}}
+        </ng-template>
+    </p-timeline>
+</div>
+
+<div class="card">
+    <h5>Alternate Align</h5>
+    <p-timeline [value]="events1" align="alternate">
+        <ng-template pTemplate="content" let-event>
+            {{event.status}}
+        </ng-template>
+    </p-timeline>
+</div>
+
+<div class="card">
+    <h5>Opposite Content</h5>
+    <p-timeline [value]="events1">
+        <ng-template pTemplate="content" let-event>
+            <small class="p-text-secondary">{{event.date}}</small>
+        </ng-template>
+        <ng-template pTemplate="opposite" let-event>
+            {{event.status}}
+        </ng-template>
+    </p-timeline>
+</div>

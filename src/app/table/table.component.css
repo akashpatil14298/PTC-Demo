@@ -1,0 +1,173 @@
+.Content-box {
+  background-color: rgba(113, 113, 113, 0.2);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.Content-box1{
+  background-color: rgba(113, 113, 113, 0.2);
+  padding: 10px 15px;
+  border-radius: 5px;
+  height: 400px;
+  overflow-y:scroll;
+}
+
+.Content-box1::-webkit-scrollbar{
+  display: none;
+}
+
+.Content-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  border-radius: 5px;
+}
+
+.angleupIcon {
+  padding-right: 5px;
+}
+
+.SelectedTab {
+  font-size: 14px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.seperator1 {
+  width: 100%;
+  background-color: rgb(194, 191, 191);
+  height: 1px;
+  margin-top: 15px;
+}
+
+.tableHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.tableheader {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.pencilIcon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.TableIcon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 2px solid #e9ecef;
+  border-collapse: collapse;
+}
+
+.notes {
+  font-size: 20px;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.Note-box {
+  height: 200px;
+  width: 100%;
+  border: 2px solid rgba(116, 116, 116, 0.4);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: #ff0000 !important;
+}
+
+:host ::ng-deep .p-divider.p-divider-horizontal {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.leftTable {
+  width: 30%;
+  border-collapse: collapse;
+}
+
+.rightTable {
+  width: 70%;
+  border-collapse: collapse;
+}
+:host ::ng-deep .p-calendar .p-inputtext {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+:host ::ng-deep .p-calendar .p-datepicker {
+  transform-origin: center bottom;
+  top: -30px;
+  left: -70px;
+}
+:host ::ng-deep .p-calendar {
+  width: 240px;
+}
+.DateSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 25%; */
+  justify-content: flex-end;
+}
+
+.Weekof {
+  font-family: Arial;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.verticalLine {
+  margin-left: 20px;
+  opacity: 0.5;
+}
+
+
+@media screen and (min-width:768px) and (max-width:991.8px){
+  .leftTable {
+    width: 50%;
+  }
+  .rightTable {
+    width: 50%;
+  }
+}
+
+/*----------------------------- Desktops ----------------------------*/
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .leftTable {
+    width: 40%;
+  }
+  .rightTable {
+    width: 60%;
+  }
+}
+
+/*-----------------------------Large Desktops ----------------------------*/
+@media screen and (min-width: 1200px) {
+  .leftTable {
+    width: 35%;
+  }
+
+  .rightTable {
+    width: 65%;
+  }
+}
